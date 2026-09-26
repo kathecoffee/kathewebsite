@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--<title>Menu | Budget friendly cafe in hsr layout</title>-->
+  <title>Kathe Coffee Menu | Coffee, Food & Desserts in HSR Layout</title>
+  <link rel="canonical" href="https://kathecoffeeblr.in/menu">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+  <!--<meta name="description" content="Kathe Specialty Coffee — honest brews, small rooms with good light. HSR Layout, Bengaluru." />-->
+  <meta name="description" content="Explore the Kathe Coffee menu in HSR Layout, Bengaluru, with freshly brewed coffee, vegetarian food, snacks, sandwiches, desserts and refreshing beverages for every craving.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Menu",
+  "name": "Kathe Coffee Menu",
+  "url": "https://kathecoffeeblr.in/coffee",
+  "description": "Explore the Kathe Coffee menu featuring freshly brewed coffee, vegetarian food, snacks, desserts and refreshing beverages in HSR Layout, Bengaluru.",
+  "mainEntity": {
+    "@type": "CafeOrCoffeeShop",
+    "name": "Kathe Coffee",
+    "url": "https://kathecoffeeblr.in/",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ground Floor, 2727/1, 27th Main Rd",
+      "addressLocality": "HSR Layout",
+      "addressRegion": "Karnataka",
+      "postalCode": "560102",
+      "addressCountry": "IN"
+    }
+  }
+}
+</script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Fredoka:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.css?v=5" />
+</head>
+<body>
+
+  <!-- CSS-only mobile menu toggle -->
+  <input type="checkbox" id="menuToggle" class="menu-toggle-input" hidden />
+  <input type="checkbox" id="bookingToggle" class="booking-toggle-input" hidden />
+
+  <!-- ============ ANNOUNCEMENT BAR ============ -->
+  <!-- <div class="announcement">
+    Freshly Roasted Beans &nbsp;·&nbsp; Free Brewing Guide With Every Bag &nbsp;·&nbsp; Open Daily 7AM – 10PM
+  </div> -->
+
+  <!-- ============ STICKY HEADER ============ -->
+  <header class="site-header" id="siteHeader">
+    <!-- Nav toggle: opens the drawer with Home / About / Menu / Gallery / Contact -->
+    <label for="menuToggle" class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </label>
+
+    <!-- Centered brand -->
+    <a href="#" class="brand" aria-label="Kathe home">
+      <img src="images/logo3.svg" alt="Kathe Speciality Coffee" class="brand__logo" />
+    </a> 
+
+    <!-- Persistent CTA -->
+    <label for="bookingToggle" class="nav-cta">
+      <span class="nav-cta-text">Book Now</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
+      </svg>
+    </label>
+  </header>
+
+  <!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu">
+    <a href="/">Home</a>
+    <a href="/about">About Us</a>
+    <a href="/menu">Menu</a>
+    <a href="/contact">Contact</a>
+</div>
+
+  <!-- Click-outside-to-close overlay -->
+  <label for="menuToggle" class="mobile-menu-overlay" aria-hidden="true"></label>
+  
+
+  <!-- ============ BOOKING MODAL ============ -->
+  <label for="bookingToggle" class="booking-overlay" aria-hidden="true"></label>
+
+  <div class="booking-modal" role="dialog" aria-modal="true" aria-labelledby="bookingModalTitle">
+    <label for="bookingToggle" class="booking-modal__close" aria-label="Close booking form">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="6" y1="6" x2="18" y2="18" /><line x1="18" y1="6" x2="6" y2="18" />
+      </svg>
+    </label>
+
+    <p class="booking-modal__eyebrow">Reserve a Table</p>
+    <h2 class="booking-modal__title" id="bookingModalTitle">Come sit with us.</h2>
+    <p class="booking-modal__sub">Pick a date and time, and we'll have a table waiting.</p>
+
+    <form class="booking-form" id="bookingForm" action="#" method="get">
+      <div class="booking-form__row">
+        <label class="booking-form__field">
+          <span>Full Name</span>
+          <input type="text" name="bookingName" placeholder="Your name" required />
+        </label>
+      </div>
+
+      <div class="booking-form__row booking-form__row--split">
+        <label class="booking-form__field">
+          <span>Phone Number</span>
+          <input type="tel" name="bookingPhone" placeholder="+91 98765 43210" required />
+        </label>
+        <label class="booking-form__field">
+          <span>Guests</span>
+          <input type="number" name="bookingGuests" min="1" max="12" value="2" required />
+        </label>
+      </div>
+
+      <div class="booking-form__row booking-form__row--split">
+        <label class="booking-form__field">
+          <span>Date</span>
+          <input type="date" name="bookingDate" required />
+        </label>
+        <label class="booking-form__field">
+          <span>Time</span>
+          <input type="time" name="bookingTime" required />
+        </label>
+      </div>
+
+      <div class="booking-form__row">
+        <label class="booking-form__field">
+          <span>Special Request <em>(optional)</em></span>
+          <textarea name="bookingNote" rows="3" placeholder="Window seat, birthday, dietary needs…"></textarea>
+        </label>
+      </div>
+
+      <button type="submit" class="btn btn-solid booking-form__submit">Confirm Reservation</button>
+      <p class="booking-form__msg" role="status"></p>
+    </form>
+  </div>
+
+  <main>
+<input type="checkbox" id="menuExpand" class="menu-expand-input" hidden />
+
+<section class="category" id="menu">
+      <div class="category__panel category__panel">
+        <div class="category__text">
+          <header class="category__header">
+            <h2 class="category__title">Hot Coffee</h2>
+            <p class="category__tagline">Classic espresso-bar staples, pulled fresh to order.</p>
+          </header>
+          <div class="menu-list">
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Espresso</h3>
+              <span class="menu-row__price">₹129</span>
+            </div>
+            <p class="menu-row__note">A concentrated, syrupy shot with a deep golden crema on top. Sharp, aromatic and the truest test of any roast.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Double Espresso</h3>
+              <span class="menu-row__price">₹149</span>
+            </div>
+            <p class="menu-row__note">Twice the shot, twice the intensity — for the mornings that need real convincing. Layered, bittersweet and full-bodied.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Americano</h3>
+              <span class="menu-row__price">₹149</span>
+            </div>
+            <p class="menu-row__note">Espresso lengthened with hot water for a lighter, drip-coffee style cup. Clean, smooth and gently bitter.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Cappuccino</h3>
+              <span class="menu-row__price">₹189</span>
+            </div>
+            <p class="menu-row__note">Equal parts espresso, steamed milk and silky microfoam. A textbook classic, dusted with a whisper of cocoa.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Latte</h3>
+              <span class="menu-row__price">₹199</span>
+            </div>
+            <p class="menu-row__note">Espresso rounded out with generous steamed milk and a thin veil of foam. Mellow, creamy and endlessly comforting.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Flat White</h3>
+              <span class="menu-row__price">₹199</span>
+            </div>
+            <p class="menu-row__note">A stronger, tighter cousin of the latte with velvety micro-foam. Bold coffee flavour that doesn't hide behind the milk.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Hot Chocolate</h3>
+              <span class="menu-row__price">₹249</span>
+            </div>
+            <p class="menu-row__note">Rich melted chocolate whisked into steamed milk until glossy. Deep, indulgent and best sipped slowly.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Mocha</h3>
+              <span class="menu-row__price">₹229</span>
+            </div>
+            <p class="menu-row__note">Espresso meets melted chocolate and steamed milk for the best of both worlds. Sweet, bittersweet and warming.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Spanish Latte</h3>
+              <span class="menu-row__price">₹249</span>
+            </div>
+            <p class="menu-row__note">Espresso layered with condensed and steamed milk for a caramel-sweet finish. Rich, silky and unapologetically indulgent.</p>
+          </div>
+          </div>
+        </div>
+        <div class="category__media">
+          <img src="images/coffee-kathe-coffee-hsr-layout.png" alt="hot-coffee">
+          <!-- <span class="category__badge">Hot Coffee</span> -->
+        </div>
+      </div>
+    </section>
+
+
+    <!-- <div class="menu-expand-row menu-expand-row--top">
+      <label for="menuExpand" class="btn menu-expand-btn">
+        View Full Menu
+      </label>
+    </div>  -->
+
+    <section class="category" id="matcha">
+      <div class="category__panel">
+        <div class="category__text">
+          <header class="category__header">
+            <h2 class="category__title">Matcha</h2>
+            <p class="category__tagline">Stone-ground ceremonial-grade matcha, whisked fresh.</p>
+          </header>
+          <div class="menu-list">
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Classic Iced Matcha Latte</h3>
+              <span class="menu-row__price">₹259</span>
+            </div>
+            <p class="menu-row__note">Vibrant, whisked matcha over cold milk and ice. Grassy, earthy and gently sweet with a clean finish.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Strawberry Matcha Latte</h3>
+              <span class="menu-row__price">₹289</span>
+            </div>
+            <p class="menu-row__note">Layers of fresh strawberry puree and matcha over milk. A pretty, fruit-forward twist on the classic.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Iced Mocha</h3>
+              <span class="menu-row__price">₹249</span>
+            </div>
+            <p class="menu-row__note">Chocolate and espresso shaken cold over milk and ice. Dessert-like, rich and a little decadent.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Coconut Matcha Cloud</h3>
+              <span class="menu-row__price">₹309</span>
+            </div>
+            <p class="menu-row__note">Matcha crowned with a cloud of whipped coconut cream. Tropical, silky and a little bit of theatre in a glass.</p>
+          </div>
+          </div>
+        </div>
+        <div class="category__media">
+          <img src="images/matcha.jpeg" alt="matcha">
+          <!-- <span class="category__badge">Matcha</span> -->
+        </div>
+      </div>
+    </section>
+    <div class="menu-expand-row menu-expand-row--top">
+      <label for="menuExpand" class="btn menu-expand-btn">
+        View Full Menu
+      </label>
+    </div> 
+<section class="category category--extra" id="cold-coffee-signatures">
+      <div class="category__panel category__panel">
+        <div class="category__text">
+          <header class="category__header">
+            <h2 class="category__title">Cold Coffee &amp; Signatures</h2>
+            <p class="category__tagline">House-brewed, chilled and built for warm afternoons.</p>
+          </header>
+          <div class="menu-list">
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Iced Americano</h3>
+              <span class="menu-row__price">₹179</span>
+            </div>
+            <p class="menu-row__note">Espresso over ice and cold water, nothing else. Crisp, refreshing and unfiltered coffee flavour.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Iced Latte</h3>
+              <span class="menu-row__price">₹219</span>
+            </div>
+            <p class="menu-row__note">Cold milk and espresso poured over ice for a smoother, milder sip. A reliable everyday refresher.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Classic Cold Coffee</h3>
+              <span class="menu-row__price">₹229</span>
+            </div>
+            <p class="menu-row__note">Our café's original — blended coffee, milk and a touch of sugar, whipped frothy and cold. Simple and satisfying.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Citrus Cold Brew</h3>
+              <span class="menu-row__price">₹239</span>
+            </div>
+            <p class="menu-row__note">Slow-steeped cold brew brightened with citrus. Bold, tangy and low on bitterness.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Vanilla Cold Coffee</h3>
+              <span class="menu-row__price">₹249</span>
+            </div>
+            <p class="menu-row__note">Classic cold coffee rounded out with real vanilla. Sweet, aromatic and easy to fall in love with.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Spanish Iced Latte</h3>
+              <span class="menu-row__price">₹259</span>
+            </div>
+            <p class="menu-row__note">Condensed milk poured over espresso and ice for a striking layered look. Sweet, bold and Instagram-ready.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Vietnamese Iced Coffee</h3>
+              <span class="menu-row__price">₹259</span>
+            </div>
+            <p class="menu-row__note">Slow-dripped Robusta over sweetened condensed milk. Strong, syrupy and unmistakably distinctive.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Caramel Frappe</h3>
+              <span class="menu-row__price">₹269</span>
+            </div>
+            <p class="menu-row__note">Blended coffee, ice and caramel whipped into a thick, frosty treat. Sweet enough to double as dessert.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Dark Chocolate Frappe</h3>
+              <span class="menu-row__price">₹279</span>
+            </div>
+            <p class="menu-row__note">Dark chocolate blended cold and thick with coffee and ice. Deep, bittersweet and lusciously indulgent.</p>
+          </div>
+          </div>
+        </div>
+        <div class="category__media">
+          <img src="images/coldcoffee.jpeg" alt="">
+          <!-- <span class="category__badge">Cold Coffee &amp; Signatures</span> -->
+        </div>
+      </div>
+    </section>
+<section class="category category--extra" id="tea-non-coffee">
+      <div class="category__panel">
+        <div class="category__text">
+          <header class="category__header">
+            <h2 class="category__title">Tea &amp; Non-Coffee</h2>
+            <p class="category__tagline">Something for every mood, coffee or not.</p>
+          </header>
+          <div class="menu-list">
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Immunity Booster</h3>
+              <span class="menu-row__price">₹129</span>
+            </div>
+            <p class="menu-row__note">Light, grassy and gently steeped for a clean, calming cup. A quiet, no-frills classic.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Jasmine Tea</h3>
+              <span class="menu-row__price">₹119</span>
+            </div>
+            <p class="menu-row__note">Delicate green tea infused with fragrant jasmine blossoms, offering a soothing floral aroma and refreshing finish.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Fresh Lime Soda</h3>
+              <span class="menu-row__price">₹149</span>
+            </div>
+            <p class="menu-row__note">Freshly squeezed lime, soda and your choice of sweet or salted. Fizzy, tart and instantly refreshing.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Iced Lemon Tea</h3>
+              <span class="menu-row__price">₹149</span>
+            </div>
+            <p class="menu-row__note">Chilled black tea brightened with lemon and a hint of sweetness. Light, tangy and endlessly drinkable.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Cooler of the Day</h3>
+              <span class="menu-row__price">₹199</span>
+            </div>
+            <p class="menu-row__note">A rotating seasonal fruit cooler, made fresh each day. Ask your server what's in the glass today.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Hibiscus Tea</h3>
+              <span class="menu-row__price">₹119</span>
+            </div>
+            <p class="menu-row__note">A vibrant, naturally caffeine-free herbal infusion with a refreshing tart flavor and floral aroma.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Tropical Twist</h3>
+              <span class="menu-row__price">₹219</span>
+            </div>
+            <p class="menu-row__note">Avocado, coconut and mango blended into a velvety smoothie. Tropical, nourishing and naturally sweet.</p>
+          </div>
+          </div>
+        </div>
+        <div class="category__media">
+          <img src="images/cooler-of-the-day-kathe-coffee.jpeg" alt="tea">
+          <!-- <span class="category__badge">Tea &amp; Non-Coffee</span> -->
+        </div>
+      </div>
+    </section>
+<section class="category category--extra" id="slice-in-bn">
+      <div class="category__panel category__panel">
+        <div class="category__text">
+          <header class="category__header">
+            <h2 class="category__title">Slice in B/N</h2>
+            <p class="category__tagline">Open-faced slices, layered and generously topped.</p>
+          </header>
+          <div class="menu-list">
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Three Cheese Chilli Toast</h3>
+              <span class="menu-row__price">₹229</span>
+            </div>
+            <p class="menu-row__note">A trio of melted cheeses spiked with chilli on crisp toast sharp,gooey and packs real heat.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Hummus Veg Open Toast</h3>
+              <span class="menu-row__price">₹279</span>
+            </div>
+            <p class="menu-row__note">Creamy hummus piled with crisp seasonal vegetables on toasted bread. Wholesome, nutty and satisfying.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Garlic Mushroom Open Toast</h3>
+              <span class="menu-row__price">₹229</span>
+            </div>
+            <p class="menu-row__note">Sauteed mushrooms in garlic butter piled on open toast. Earthy, fragrant and deeply savoury</p>
+          </div>
+          </div>
+        </div>
+        <div class="category__media">
+          <img src="images/toast-kathe-coffee-hsr-layout.jpeg" alt="toast">
+          <!-- <span class="category__badge">Slice in B/N</span> -->
+        </div>
+      </div>
+    </section>
+<section class="category category--extra" id="toast-sandwiches">
+      <div class="category__panel">
+        <div class="category__text">
+          <header class="category__header">
+            <h2 class="category__title">Toast &amp; Sandwiches</h2>
+            <p class="category__tagline">Griddled, stacked and best eaten while still warm.</p>
+          </header>
+          <div class="menu-list">
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Bombay Masala Sandwich</h3>
+              <span class="menu-row__price">₹229</span>
+            </div>
+            <p class="menu-row__note">Spiced mashed potato, chutneys and vegetables grilled between buttered bread. Street-style comfort, done right.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Classic Veg Grilled Sandwich</h3>
+              <span class="menu-row__price">₹199</span>
+            </div>
+            <p class="menu-row__note">A simple, buttery grilled sandwich loaded with fresh vegetables. Familiar, crisp and always a safe favourite.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Corn and Cheese Sandwich</h3>
+              <span class="menu-row__price">₹219</span>
+            </div>
+            <p class="menu-row__note">Sweet corn folded into melted cheese between toasted bread. Gooey, mild and a crowd-pleaser for all ages.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Pesto Veg Grilled Sandwich</h3>
+              <span class="menu-row__price">₹269</span>
+            </div>
+            <p class="menu-row__note">Grilled bread layered with basil pesto and garden vegetables. Herby, toasty and full of green freshness.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Paneer Tikka Sandwich</h3>
+              <span class="menu-row__price">₹309</span>
+            </div>
+            <p class="menu-row__note">Smoky tandoor-spiced paneer stacked between grilled bread. Bold, charred and full of Indian spice.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Pesto Paneer Sandwich</h3>
+              <span class="menu-row__price">₹249</span>
+            </div>
+            <p class="menu-row__note">Grilled paneer and basil pesto pressed between toasted bread. Creamy, herby and satisfyingly rich.</p>
+          </div>
+          </div>
+        </div>
+        <div class="category__media">
+          <img src="images/sandwich-kathe-coffee-hsr-layout.png" alt="sandwich">
+          <!-- <span class="category__badge">Toast &amp; Sandwiches</span> -->
+        </div>
+      </div>
+    </section>
+<section class="category category--extra" id="burgers">
+      <div class="category__panel category__panel">
+        <div class="category__text">
+          <header class="category__header">
+            <h2 class="category__title">Burgers</h2>
+            <p class="category__tagline">Hand-pressed patties in a toasted bun.</p>
+          </header>
+          <div class="menu-list">
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Crispy Aloo Burger</h3>
+              <span class="menu-row__price">₹199</span>
+            </div>
+            <p class="menu-row__note">A crunchy spiced potato patty stacked with fresh crisp veggies. Hearty, homely and nostalgically good.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Paneer Burger</h3>
+              <span class="menu-row__price">₹239</span>
+            </div>
+            <p class="menu-row__note">A juicy grilled paneer patty layered with sauces and crunch. Rich, protein-packed and satisfying bite after bite.</p>
+          </div>
+          </div>
+        </div>
+        <div class="category__media">
+          <img src="images/burgur1.jpeg" alt="burgur">
+          <!-- <span class="category__badge">Burgers</span> -->
+        </div>
+      </div>
+    </section>
+<section class="category category--extra" id="quick-bites">
+      <div class="category__panel category__panel">
+        <div class="category__text">
+          <header class="category__header">
+            <h2 class="category__title">Quick Bites</h2>
+            <p class="category__tagline">For sharing — or not.</p>
+          </header>
+          <div class="menu-list">
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Salted Fries</h3>
+              <span class="menu-row__price">₹149</span>
+            </div>
+            <p class="menu-row__note">Golden, crisp-edged fries finished with a light dusting of salt. Simple, hot and endlessly snackable.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Peri Peri Fries</h3>
+              <span class="menu-row__price">₹169</span>
+            </div>
+            <p class="menu-row__note">Crispy fries tossed in a fiery peri peri seasoning. Bold, tangy and a little addictive.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Cheese Fries</h3>
+              <span class="menu-row__price">₹199</span>
+            </div>
+            <p class="menu-row__note">Fries smothered in melted, gooey cheese. Comfort food at its most straightforward and satisfying.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Nachos with Cheese Dip</h3>
+              <span class="menu-row__price">₹199</span>
+            </div>
+            <p class="menu-row__note">Crunchy corn nachos served with a warm, molten cheese dip. Great for sharing, better for not sharing.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Veggie Quiche</h3>
+              <span class="menu-row__price">₹219</span>
+            </div>
+            <p class="menu-row__note">A plant-based quiche with a chickpea flour crust, roasted veggies and tofu-pesto filling. Light, savoury and entirely vegan.</p>
+          </div>
+          </div>
+        </div>
+        <div class="category__media">
+          <img src="images/fries-kathe-coffee-hsr-layout.jpeg" alt="fries">
+          <!-- <span class="category__badge">Quick Bites</span> -->
+        </div>
+      </div>
+    </section>
+<section class="category category--extra" id="healthy-bowls">
+      <div class="category__panel">
+        <div class="category__text">
+          <header class="category__header">
+            <h2 class="category__title">Healthy 'N' Tasty Bowls</h2>
+            <p class="category__tagline">Fresh, filling and built to nourish.</p>
+          </header>
+          <div class="menu-list">
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Taco Salad Bowl</h3>
+              <span class="menu-row__price">₹199</span>
+            </div>
+            <p class="menu-row__note">Crisp greens, beans, corn and salsa piled Tex-Mex style. Crunchy, zesty and packed with texture.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Classic Caesar Salad</h3>
+              <span class="menu-row__price">₹209</span>
+            </div>
+            <p class="menu-row__note">Crisp romaine, parmesan and croutons tossed in creamy Caesar dressing. A timeless classic done simply.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Continental Fusion Millet Stir Fry</h3>
+              <span class="menu-row__price">₹219</span>
+            </div>
+            <p class="menu-row__note">Millets wok-tossed with vegetables in a light continental sauce. Nutty, wholesome and gently spiced.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Yoghurt and Assorted Fruit Bowl</h3>
+              <span class="menu-row__price">₹229</span>
+            </div>
+            <p class="menu-row__note">Thick, creamy yoghurt layered with a medley of fresh seasonal fruit. Light, probiotic-rich and refreshing.</p>
+          </div>
+          </div>
+        </div>
+        <div class="category__media">
+          <img src="images/tacoo.jpeg" alt="taco">
+          <!-- <span class="category__badge">Healthy 'N' Tasty Bowls</span> -->
+        </div>
+      </div>
+    </section>
+<section class="category category--extra" id="pasta">
+      <div class="category__panel category__panel">
+        <div class="category__text">
+          <header class="category__header">
+            <h2 class="category__title">Pasta</h2>
+            <p class="category__tagline">Slow sauces, fresh herbs, generously portioned.</p>
+          </header>
+          <div class="menu-list">
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Arrabiata Pasta</h3>
+              <span class="menu-row__price">₹269</span>
+            </div>
+            <p class="menu-row__note">Pasta tossed in a fiery tomato-chilli sauce with garlic. Punchy, rustic and unapologetically spicy.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Pink Sauce Pasta</h3>
+              <span class="menu-row__price">₹299</span>
+            </div>
+            <p class="menu-row__note">A creamy blend of tomato and cream coats every strand. Comforting, mellow and a café favourite.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Aglio Olio Veg Pasta</h3>
+              <span class="menu-row__price">₹309</span>
+            </div>
+            <p class="menu-row__note">Garlic, olive oil and chilli flakes tossed with vegetables. Light, aromatic and deceptively simple.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Pink Sauce Penne</h3>
+              <span class="menu-row__price">₹339</span>
+            </div>
+            <p class="menu-row__note">Penne coated in our house pink sauce with a touch of herbs. Rich, silky and generously cheesy.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Creamy Penne with Basil Pesto &amp; Sundried Tomato</h3>
+              <span class="menu-row__price">₹329</span>
+            </div>
+            <p class="menu-row__note">Penne folded into basil pesto cream with sun-dried tomato. Herby, tangy and full of Italian character.</p>
+          </div>
+          </div>
+        </div>
+        <div class="category__media">
+          <img src="images/pasta-kathe-coffee-hsr-layout.jpeg" alt="pasta">
+          <!-- <span class="category__badge">Pasta</span> -->
+        </div>
+      </div>
+    </section>
+<section class="category category--extra" id="pizzas">
+      <div class="category__panel">
+        <div class="category__text">
+          <header class="category__header">
+            <h2 class="category__title">Pizzas</h2>
+            <p class="category__tagline">Hand-stretched bases, baked to order.</p>
+          </header>
+          <div class="menu-list">
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Margherita Pizza</h3>
+              <span class="menu-row__price">₹289</span>
+            </div>
+            <p class="menu-row__note">Tomato, mozzarella and fresh basil on a classic thin crust. Simple, timeless and always a good idea.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Farm Fresh Veg Pizza</h3>
+              <span class="menu-row__price">₹349</span>
+            </div>
+            <p class="menu-row__note">Loaded with garden-fresh vegetables over melted mozzarella. Crisp, colourful and packed with crunch.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Pesto Paneer Pizza</h3>
+              <span class="menu-row__price">₹399</span>
+            </div>
+            <p class="menu-row__note">Basil pesto base topped with grilled paneer and cheese. Herby, rich and generously topped.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Pizza de Quatro ForMaggio</h3>
+              <span class="menu-row__price">₹349</span>
+            </div>
+            <p class="menu-row__note">Four melted cheeses layered for maximum indulgence. Gooey, decadent and made for cheese lovers.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Calzone with Smokey Tomato Sauce</h3>
+              <span class="menu-row__price">₹329</span>
+            </div>
+            <p class="menu-row__note">A folded, oven-baked pocket stuffed with cheese and veggies. Crisp outside, molten and smoky within.</p>
+          </div>
+          </div>
+        </div>
+        <div class="category__media">
+          <img src="images/pizza-kathe-coffee-hsr-layout.jpeg" alt="pizza">
+          <!-- <span class="category__badge">Pizzas</span> -->
+        </div>
+      </div>
+    </section>
+<section class="category category--extra" id="bakes-desserts">
+      <div class="category__panel category__panel">
+        <div class="category__text">
+          <header class="category__header">
+            <h2 class="category__title">Bakes &amp; Desserts</h2>
+            <p class="category__tagline">Baked fresh in-house, daily.</p>
+          </header>
+          <div class="menu-list">
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Cookie</h3>
+              <span class="menu-row__price">₹99</span>
+            </div>
+            <p class="menu-row__note">A thick, chewy-centred cookie with crisp golden edges. Simple, buttery and impossible to eat slowly.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Butter Croissant</h3>
+              <span class="menu-row__price">₹149</span>
+            </div>
+            <p class="menu-row__note">Laminated, flaky and rich with butter in every layer. A classic French bake done with care.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Tea Cake Slice</h3>
+              <span class="menu-row__price">₹149</span>
+            </div>
+            <p class="menu-row__note">A light, moist sponge cake perfect alongside your cup of choice. Simple, homely and comforting.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Brownie</h3>
+              <span class="menu-row__price">₹179</span>
+            </div>
+            <p class="menu-row__note">Dense, fudgy and deeply chocolatey with a crackly top. Rich enough to share, good enough not to.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Banana Walnut Cake</h3>
+              <span class="menu-row__price">₹189</span>
+            </div>
+            <p class="menu-row__note">Moist banana cake studded with toasted walnuts. Nutty, naturally sweet and lightly spiced.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Chocolate Croissant</h3>
+              <span class="menu-row__price">₹199</span>
+            </div>
+            <p class="menu-row__note">Buttery, flaky pastry wrapped around a rich dark chocolate core. Indulgent and best enjoyed warm.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Cinnamon Roll</h3>
+              <span class="menu-row__price">₹199</span>
+            </div>
+            <p class="menu-row__note">Soft, swirled dough laced with cinnamon sugar and glazed. Warm, spiced and utterly comforting.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Almond Croissant</h3>
+              <span class="menu-row__price">₹219</span>
+            </div>
+            <p class="menu-row__note">A butter croissant filled and topped with almond cream. Nutty, rich and generously dusted with almonds.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Cheesecake Slice</h3>
+              <span class="menu-row__price">₹239</span>
+            </div>
+            <p class="menu-row__note">Creamy, dense cheesecake on a buttery biscuit base. Rich, tangy and finished with a smooth top.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Tiramisu Cup / Dessert Cup</h3>
+              <span class="menu-row__price">₹249</span>
+            </div>
+            <p class="menu-row__note">Layers of coffee-soaked sponge and mascarpone cream. Silky, boozy-in-spirit and classically Italian.</p>
+          </div>
+          </div>
+        </div>
+        <div class="category__media">
+          <img src="images/cheesecake-kathe-coffee-hsr-layout.jpeg" alt="bake">
+          <!-- <span class="category__badge">Bakes &amp; Desserts</span> -->
+        </div>
+      </div>
+    </section>
+<section class="category category--extra" id="signature-sweet-bites">
+      <div class="category__panel">
+        <div class="category__text">
+          <header class="category__header">
+            <h2 class="category__title">Signature Sweet Bites</h2>
+            <p class="category__tagline">Small, thoughtful finishes to any visit.</p>
+          </header>
+          <div class="menu-list">
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Kathe Affogato</h3>
+              <span class="menu-row__price">₹199</span>
+            </div>
+            <p class="menu-row__note">A scoop of vanilla ice cream drowned in hot espresso. Hot meets cold in one dramatic, delicious pour.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Marmalade &amp; Ginger Fool</h3>
+              <span class="menu-row__price">₹219</span>
+            </div>
+            <p class="menu-row__note">Whipped cream folded with citrus marmalade and warm ginger. Light, tangy and elegantly simple.</p>
+          </div>
+          </div>
+        </div>
+        <div class="category__media">
+          <img src="images/sweet-bites-kathe-coffee.jpeg" alt="">
+          <!-- <span class="category__badge">Signature Sweet Bites</span> -->
+        </div>
+      </div>
+    </section>
+<section class="category category--extra" id="combos">
+      <div class="category__panel category__panel">
+        <div class="category__text">
+          <header class="category__header">
+            <h2 class="category__title">Combos — Better Together</h2>
+            <p class="category__tagline">Bundled pairings for better value — nutrition varies by items selected.</p>
+          </header>
+          <div class="menu-list">
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Coffee + Cookie</h3>
+              <span class="menu-row__price">₹249</span>
+            </div>
+            <p class="menu-row__note">A hot coffee paired with a fresh-baked cookie. The classic pick-me-up, bundled and better value.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Student Combo</h3>
+              <span class="menu-row__price">₹249</span>
+            </div>
+            <p class="menu-row__note">Coffee and sandwich — built for a quick, affordable break between classes.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Work-Friendly Combo</h3>
+              <span class="menu-row__price">₹399</span>
+            </div>
+            <p class="menu-row__note">Coffee and a sandwich / burger + cookies for a proper desk-side lunch.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Coffee + Brownie</h3>
+              <span class="menu-row__price">₹329</span>
+            </div>
+            <p class="menu-row__note">A warm coffee alongside a fudgy brownie. Simple, reliable comfort in one combo.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Premium Morning Combo</h3>
+              <span class="menu-row__price">₹349</span>
+            </div>
+            <p class="menu-row__note">Spanish latte with a butter croissant — an indulgent, café-style start to the day.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Sandwich Combo</h3>
+              <span class="menu-row__price">₹349</span>
+            </div>
+            <p class="menu-row__note">A hearty sandwich paired with a cappuccino, ready whenever hunger strikes.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Cold Coffee Bakery Combo</h3>
+              <span class="menu-row__price">₹379</span>
+            </div>
+            <p class="menu-row__note">Classic cold coffee with a warm cinnamon roll — a sweet, cooling combination.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Snack Combo</h3>
+              <span class="menu-row__price">₹429</span>
+            </div>
+            <p class="menu-row__note">Burger, fries and a cooler — the full snack-attack, solved in one order.</p>
+          </div>
+          <div class="menu-row">
+            <div class="menu-row__head">
+              <h3 class="menu-row__name">Meal Combo</h3>
+              <span class="menu-row__price">₹599</span>
+            </div>
+            <p class="menu-row__note">Pasta/pizza, garlic toast and a cold coffee — a complete, satisfying sit-down meal.</p>
+          </div>
+          </div>
+        </div>
+        <div class="category__media">
+          <img src="images/combo.png" alt="combo">
+          <!-- <span class="category__badge">Combos</span> -->
+        </div>
+      </div>
+    </section>
+
+
+    <div class="menu-expand-row menu-expand-row--bottom">
+      <label for="menuExpand" class="btn menu-expand-btn">
+        Minimize Menu
+      </label>
+    </div>
+
+     <!-- Galary -->
+
+</main>
+
+<footer class="kathe-footer">
+      <div class="kathe-footer-inner">
+        <!-- ================= BRAND ================= -->
+
+        <div class="kathe-brand">
+          <img
+            src="images/logo3.svg"
+            alt="Kathe Specialty Coffee"
+            class="kathe-footer-logo"
+          />
+
+          <p class="kathe-brand-text">
+            Specialty coffee, honest brews, small rooms with good light.
+          </p>
+
+          <p class="kathe-gst">GST No. : 29BUEPS5184E2Z7</p>
+
+          
+        </div>
+
+        <!-- ================= LOCATIONS ================= -->
+
+        <div class="kathe-locations">
+          <div class="kathe-heading">
+            <span></span>
+            FIND US
+            <span></span>
+          </div>
+
+          <div class="kathe-location-grid">
+            <!-- LOCATION 1 -->
+
+            <div class="kathe-location-card">
+              <div class="kathe-card-header">
+                <div class="kathe-location-name">
+                  <div class="kathe-pin">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M12 21s7-7 7-12a7 7 0 1 0-14 0c0 5 7 12 7 12z" />
+                      <circle cx="12" cy="9" r="2.3" />
+                    </svg>
+                  </div>
+
+                  <div>
+                    <span class="kathe-location-number"> LOCATION 01 </span>
+
+                    <h3>Kathe Specialty Coffee</h3>
+                  </div>
+                </div>
+
+                <div class="kathe-open">
+                  <!-- <i></i> -->
+                  OPEN · 8AM – 11PM
+                </div>
+              </div>
+
+              <div class="kathe-address">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 21s7-7 7-12a7 7 0 1 0-14 0c0 5 7 12 7 12z" />
+                  <circle cx="12" cy="9" r="2.3" />
+                </svg>
+
+                <p>
+                  Ground Floor, 2727/1, 27th Main Rd,<br />
+                  HSR Layout, Bengaluru 560102
+                </p>
+              </div>
+
+              <div class="kathe-card-buttons">
+                <a href="tel:+9194888 45678" class="kathe-map-btn">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3.1 5.2 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.7 13 13 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1L9 10.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5 13 13 0 0 0 2.8.7 2 2 0 0 1 1.8 2.1z"/>
+                  </svg>
+                  CALL US
+                </a>
+
+
+
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Kathe%20-%20Speciality%20Coffee,%202727/1,%2016th%20Cross,%2027th%20Main%20Rd,%20HSR%20Layout,%20Bengaluru,%20Karnataka%20560102" class="kathe-direction-btn">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M21 3L10 14" />
+                    <path d="M21 3l-7 18-4-7-7-4L21 3z" />
+                  </svg>
+
+                  GET DIRECTIONS
+                </a>
+              </div>
+            </div>
+
+            <!-- LOCATION 2 -->
+
+            <div class="kathe-location-card">
+              <div class="kathe-card-header">
+                <div class="kathe-location-name">
+                  <div class="kathe-pin">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M12 21s7-7 7-12a7 7 0 1 0-14 0c0 5 7 12 7 12z" />
+                      <circle cx="12" cy="9" r="2.3" />
+                    </svg>
+                  </div>
+
+                  <div>
+                    <span class="kathe-location-number"> LOCATION 02 </span>
+
+                    <h3>Kathe Specialty Coffee</h3>
+                  </div>
+                </div>
+
+                <div class="kathe-open">
+                  <!-- <i></i> -->
+                  OPEN · 8AM – 11PM
+                </div>
+              </div>
+
+              <div class="kathe-address">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 21s7-7 7-12a7 7 0 1 0-14 0c0 5 7 12 7 12z" />
+                  <circle cx="12" cy="9" r="2.3" />
+                </svg>
+
+                <p>
+                  41, 9, Sunkenahalli, Gandhi Bazaar, Basavanagudi, Bengaluru,<br />
+                  Bengaluru, Karnataka 560004
+                </p>
+              </div>
+
+              <div class="kathe-card-buttons">
+                <a href="tel:+919900316750" class="kathe-map-btn">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3.1 5.2 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.7 13 13 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1L9 10.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5 13 13 0 0 0 2.8.7 2 2 0 0 1 1.8 2.1z"/>
+                  </svg>
+                  CALL US
+                </a>
+
+
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Kathe%20Specialty%20Coffee,%2041,%209,%20Sunkenahalli,%20Gandhi%20Bazaar,%20Basavanagudi,%20Bengaluru,%20Karnataka%20560004" class="kathe-direction-btn">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M21 3L10 14" />
+                    <path d="M21 3l-7 18-4-7-7-4L21 3z" />
+                  </svg>
+
+                  GET DIRECTIONS
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= FOLLOW ================= -->
+
+        <div class="kathe-follow">
+          <div class="kathe-heading kathe-follow-heading">FOLLOW ALONG</div>
+
+          <div class="kathe-follow-line"></div>
+
+          <p>
+            Good Coffee<br />
+            Brings People<br />
+            Together
+          </p>
+
+          <div class="kathe-social">
+            <a href="https://www.instagram.com/kathe.blr/" aria-label="Instagram">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" />
+              </svg>
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=61589831272123" aria-label="Facebook">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M14 8h3V4h-3c-3.3 0-5 2-5 5v2H6v4h3v5h4v-5h3l1-4h-4V9c0-.7.3-1 1-1z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= BOTTOM ================= -->
+
+      <div class="kathe-footer-bottom">
+        <p>
+          © 2026 Kathe Specialty Coffee. Brewed with intention. Crafted in
+          Bengaluru.
+        </p>
+
+        <a href="#home"> Back to top ↑ </a>
+      </div>
+    </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

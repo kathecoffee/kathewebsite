@@ -1,0 +1,16 @@
+RewriteEngine On
+
+# Redirect .html URLs to clean URLs
+RewriteCond %{THE_REQUEST} \s/+about\.html(?:[?\s]) [NC]
+RewriteRule ^about\.html$ /about [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+menu\.html(?:[?\s]) [NC]
+RewriteRule ^menu\.html$ /menu [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+contact\.html(?:[?\s]) [NC]
+RewriteRule ^contact\.html$ /contact [R=301,L]
+
+# Clean URLs load the HTML files
+RewriteRule ^about/?$ about.html [L]
+RewriteRule ^menu/?$ menu.html [L]
+RewriteRule ^contact/?$ contact.html [L]

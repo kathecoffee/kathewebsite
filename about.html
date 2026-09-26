@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--<title>About Us | Best Aesthetic Cafes in Bangalore</title>-->
+  <title>About Kathe Coffee | Cafe in HSR Layout, Bengaluru</title>
+  <link rel="canonical" href="https://kathecoffeeblr.in/about">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+  <!--<meta name="description" content="Kathe Specialty Coffee — honest brews, small rooms with good light. HSR Layout, Bengaluru." />-->
+  <meta name="description" content="Discover Kathe Coffee in HSR Layout, Bengaluru — a vegetarian cafe designed for coffee lovers, casual meetups, work sessions and relaxed moments with great food and beverages.">
+  <meta name="robots" content="index, follow">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About Kathe Coffee",
+  "url": "https://kathecoffeeblr.in/about",
+  "description": "Learn about Kathe Coffee, a vegetarian cafe in HSR Layout, Bengaluru, serving coffee, food, snacks, desserts and refreshing beverages.",
+  "mainEntity": {
+    "@type": "CafeOrCoffeeShop",
+    "name": "Kathe Coffee",
+    "url": "https://kathecoffeeblr.in/",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ground Floor, 2727/1, 27th Main Rd",
+      "addressLocality": "HSR Layout",
+      "addressRegion": "Karnataka",
+      "postalCode": "560102",
+      "addressCountry": "IN"
+    },
+    "servesCuisine": "Vegetarian"
+  }
+}
+</script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Fredoka:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.css?v=5" />
+</head>
+<body>
+
+  <!-- CSS-only mobile menu toggle -->
+  <input type="checkbox" id="menuToggle" class="menu-toggle-input" hidden />
+  <input type="checkbox" id="bookingToggle" class="booking-toggle-input" hidden />
+
+  <!-- ============ ANNOUNCEMENT BAR ============ -->
+  <!-- <div class="announcement">
+    Freshly Roasted Beans &nbsp;·&nbsp; Free Brewing Guide With Every Bag &nbsp;·&nbsp; Open Daily 7AM – 10PM
+  </div> -->
+
+  <!-- ============ STICKY HEADER ============ -->
+  <header class="site-header" id="siteHeader">
+    <!-- Nav toggle: opens the drawer with Home / About / Menu / Gallery / Contact -->
+    <label for="menuToggle" class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </label>
+
+    <!-- Centered brand -->
+    <a href="#" class="brand" aria-label="Kathe home">
+      <img src="images/logo3.svg" alt="Kathe Speciality Coffee" class="brand__logo" />
+      </a>  
+
+    <!-- Persistent CTA -->
+    <label for="bookingToggle" class="nav-cta">
+      <span class="nav-cta-text">Book Now</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
+      </svg>
+    </label>
+  </header>
+
+  <!-- ============ MOBILE MENU ============ -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/">Home</a>
+    <a href="/about">About Us</a>
+    <a href="/menu">Menu</a>
+    <a href="/contact">Contact</a>
+  </div>
+
+  <!-- Click-outside-to-close overlay -->
+  <label for="menuToggle" class="mobile-menu-overlay" aria-hidden="true"></label>
+  
+
+  <!-- ============ BOOKING MODAL ============ -->
+  <label for="bookingToggle" class="booking-overlay" aria-hidden="true"></label>
+
+  <div class="booking-modal" role="dialog" aria-modal="true" aria-labelledby="bookingModalTitle">
+    <label for="bookingToggle" class="booking-modal__close" aria-label="Close booking form">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="6" y1="6" x2="18" y2="18" /><line x1="18" y1="6" x2="6" y2="18" />
+      </svg>
+    </label>
+
+    <p class="booking-modal__eyebrow">Reserve a Table</p>
+    <h2 class="booking-modal__title" id="bookingModalTitle">Come sit with us.</h2>
+    <p class="booking-modal__sub">Pick a date and time, and we'll have a table waiting.</p>
+
+    <form class="booking-form" id="bookingForm" action="#" method="get">
+      <div class="booking-form__row">
+        <label class="booking-form__field">
+          <span>Full Name</span>
+          <input type="text" name="bookingName" placeholder="Your name" required />
+        </label>
+      </div>
+
+      <div class="booking-form__row booking-form__row--split">
+        <label class="booking-form__field">
+          <span>Phone Number</span>
+          <input type="tel" name="bookingPhone" placeholder="+91 98765 43210" required />
+        </label>
+        <label class="booking-form__field">
+          <span>Guests</span>
+          <input type="number" name="bookingGuests" min="1" max="12" value="2" required />
+        </label>
+      </div>
+
+      <div class="booking-form__row booking-form__row--split">
+        <label class="booking-form__field">
+          <span>Date</span>
+          <input type="date" name="bookingDate" required />
+        </label>
+        <label class="booking-form__field">
+          <span>Time</span>
+          <input type="time" name="bookingTime" required />
+        </label>
+      </div>
+
+      <div class="booking-form__row">
+        <label class="booking-form__field">
+          <span>Special Request <em>(optional)</em></span>
+          <textarea name="bookingNote" rows="3" placeholder="Window seat, birthday, dietary needs…"></textarea>
+        </label>
+      </div>
+
+      <button type="submit" class="btn btn-solid booking-form__submit">Confirm Reservation</button>
+      <p class="booking-form__msg" role="status"></p>
+    </form>
+  </div>
+
+  <main>
+<section class="about" id="about">
+      <div class="container">
+        <!-- <p class="eyebrow">01 — About Us</p> -->
+        <h2 class="section-title">
+            The Story Behind Kathe.
+          </h2>
+          <p class="section-para">
+            Kathe is more than a café — it’s a space
+            somewhere between home and office, where you can catch up with
+            friends, get some work done, read a book, or simply slow down with
+            your favourite cup. With comfortable seating and a relaxed
+            atmosphere. We keep things simple, honest, and crafted with care,
+            because we believe great coffee deserves more than just an ordinary
+            experience. Kathe is a place where moments turn into memories and
+            conversations become stories.
+          </p>
+
+        <!-- <div class="about-body">
+          <p>
+            Kathe began the way most good things do — as a quiet obsession. A roaster, a
+            stubborn palate, and a room with a single wooden table. Years later, the room grew,
+            the table multiplied, but the obsession stayed the same: <em>find the honest cup.</em>
+          </p>
+          <p>
+            We source beans directly from growers we can name. We roast in small batches, taste
+            every lot, and refuse to serve a brew we wouldn't happily drink twice. What arrives in
+            your cup is a season, a place, and the patient work of a few good people.
+          </p>
+        </div> -->
+
+        <!-- <div class="stats">
+          <div class="stat">
+            <span class="stat-num">07</span>
+            <span class="stat-label">Origins Sourced</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">32</span>
+            <span class="stat-label">Brew Methods Dialed</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">04</span>
+            <span class="stat-label">Years, One Obsession</span>
+          </div>
+        </div> -->
+
+        <div class="about-video-carousel" data-video-carousel>
+          <div class="about-video-stage">
+            <div class="about-video-track" data-track>
+
+              <div class="about-video-slide" data-slide>
+                <div class="about-video-card">
+                  <img class="about-video-card__media" src="images/burger-kathe-coffee-hsr-layout.jpeg" alt="Espresso, Pulled" />
+                  <span class="about-video-card__caption">Burgur</span>
+                </div>
+              </div>
+
+              <div class="about-video-slide" data-slide>
+                <div class="about-video-card">
+                  <img class="about-video-card__media" src="images/fries-kathe-coffee-hsr-layout.jpeg" alt="Espresso, Pulled" />
+                  <span class="about-video-card__caption">Fries</span>
+                </div>
+              </div>
+
+              <div class="about-video-slide" data-slide>
+                <div class="about-video-card">
+                  <img class="about-video-card__media" src="images/cinnamon-rolls-kathe-coffee.jpeg" alt="Espresso, Pulled" />
+                  <span class="about-video-card__caption">Cinnamon Roll</span>
+                </div>
+              </div>
+
+              <div class="about-video-slide" data-slide>
+                <div class="about-video-card">
+                  <img class="about-video-card__media" src="images/coffee-kathe-coffee-hsr-layout.png" alt="Espresso, Pulled" />
+                  <span class="about-video-card__caption">Coffee</span>
+                </div>
+              </div>
+
+              <div class="about-video-slide" data-slide>
+                <div class="about-video-card">
+                  <img class="about-video-card__media" src="images/cooler-of-the-day-kathe-coffee.jpeg" alt="Espresso, Pulled" />
+                  <span class="about-video-card__caption">Cooler of the day</span>
+                </div>
+              </div>
+
+              <!-- Visual-only peek clone of slide 1. No data-slide attribute, so the
+                  carousel script ignores it entirely — it never plays or becomes
+                  "active". It just sits here so there's always something to see
+                  on the right when the last real slide is centered. -->
+              <div class="about-video-slide" data-slide>
+                <div class="about-video-card">
+                  <img class="about-video-card__media" src="images/pizza-kathe-coffee-hsr-layout.jpeg" alt="Espresso, Pulled" />
+                  <span class="about-video-card__caption">Pizza</span>
+                </div>
+              </div>
+
+              <div class="about-video-slide" data-slide>
+                <div class="about-video-card">
+                  <img class="about-video-card__media" src="images/cheesecake-kathe-coffee-hsr-layout.jpeg" alt="Espresso, Pulled" />
+                  <span class="about-video-card__caption">Cheesecake</span>
+                </div>
+              </div>
+              <div class="about-video-slide" data-slide>
+                <div class="about-video-card">
+                  <img class="about-video-card__media" src="images/sandwich-kathe-coffee-hsr-layout.png" alt="Espresso, Pulled" />
+                  <span class="about-video-card__caption">Sandwich</span>
+                </div>
+              </div>
+
+              <div class="about-video-slide" data-slide>
+                <div class="about-video-card">
+                  <img class="about-video-card__media" src="images/pasta-kathe-coffee-hsr-layout.jpeg" alt="Espresso, Pulled" />
+                  <span class="about-video-card__caption">Pasta</span>
+                </div>
+              </div>
+            <div class="about-video-slide" data-slide>
+              <div class="about-video-card">
+                <img class="about-video-card__media" src="images/sweet-bites-kathe-coffee.jpeg" alt="Espresso, Pulled" />
+                <span class="about-video-card__caption">Sweetbite</span>
+                </div>
+            </div>
+
+              <div class="about-video-slide" data-slide>
+                <div class="about-video-card">
+                  <img class="about-video-card__media" src="images/toast-kathe-coffee-hsr-layout.jpeg" alt="Espresso, Pulled" />
+                  <span class="about-video-card__caption">Toast</span>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+          <!-- <div class="about-video-dots" data-dots>
+            <button type="button" class="about-video-dot" data-dot aria-label="Go to video 1"></button>
+            <button type="button" class="about-video-dot" data-dot aria-label="Go to video 2"></button>
+            <button type="button" class="about-video-dot" data-dot aria-label="Go to video 3"></button>
+            <button type="button" class="about-video-dot" data-dot aria-label="Go to video 4"></button>
+            <button type="button" class="about-video-dot" data-dot aria-label="Go to video 5"></button>
+          </div> -->
+        </div>
+      </div>
+    </section>
+<!-- <section class="gallery-stack" id="gallery">
+  <div class="gallery-stack__scroll" data-gallery-scroll style="--count:5">
+    <div class="gallery-stack__pin">
+
+      <div class="gallery-stack__frame">
+        <div class="gallery-stack__item" data-gallery-item>
+          <img src="https://picsum.photos/id/225/700/900" alt="Placeholder photo 1" loading="lazy" />
+        </div>
+        <div class="gallery-stack__item" data-gallery-item>
+          <img src="https://picsum.photos/id/292/700/900" alt="Placeholder photo 2" loading="lazy" />
+        </div>
+        <div class="gallery-stack__item" data-gallery-item>
+          <img src="https://picsum.photos/id/431/700/900" alt="Placeholder photo 3" loading="lazy" />
+        </div>
+        <div class="gallery-stack__item" data-gallery-item>
+          <img src="https://picsum.photos/id/493/700/900" alt="Placeholder photo 4" loading="lazy" />
+        </div>
+        <div class="gallery-stack__item" data-gallery-item>
+          <img src="https://picsum.photos/id/542/700/900" alt="Placeholder photo 5" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="gallery-stack__side-content">
+        <h2 class="gallery-stack__title">Moments at Kathe</h2>
+        <p class="gallery-stack__tagline">Café Gallery is a cozy and beautiful place to relax and enjoy delicious food and drinks.
+It has a warm and pleasant atmosphere with attractive décor and comfortable seating.
+It is a perfect place to meet friends, have conversations, or spend some peaceful time.
+Café Gallery offers a memorable experience with its friendly service and inviting ambience.</p>
+      </div>
+
+    </div>
+  </div>
+</section> -->
+</main>
+
+<footer class="kathe-footer">
+      <div class="kathe-footer-inner">
+        <!-- ================= BRAND ================= -->
+
+        <div class="kathe-brand">
+          <img
+            src="images/logo3.svg"
+            alt="Kathe Specialty Coffee"
+            class="kathe-footer-logo"
+          />
+
+          <p class="kathe-brand-text">
+            Specialty coffee, honest brews, small rooms with good light.
+          </p>
+
+          <p class="kathe-gst">GST No. : 29BUEPS5184E2Z7</p>
+
+          
+        </div>
+
+        <!-- ================= LOCATIONS ================= -->
+
+        <div class="kathe-locations">
+          <div class="kathe-heading">
+            <span></span>
+            FIND US
+            <span></span>
+          </div>
+
+          <div class="kathe-location-grid">
+            <!-- LOCATION 1 -->
+
+            <div class="kathe-location-card">
+              <div class="kathe-card-header">
+                <div class="kathe-location-name">
+                  <div class="kathe-pin">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M12 21s7-7 7-12a7 7 0 1 0-14 0c0 5 7 12 7 12z" />
+                      <circle cx="12" cy="9" r="2.3" />
+                    </svg>
+                  </div>
+
+                  <div>
+                    <span class="kathe-location-number"> LOCATION 01 </span>
+
+                    <h3>Kathe Specialty Coffee</h3>
+                  </div>
+                </div>
+
+                <div class="kathe-open">
+                  <!-- <i></i> -->
+                  OPEN · 8AM – 11PM
+                </div>
+              </div>
+
+              <div class="kathe-address">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 21s7-7 7-12a7 7 0 1 0-14 0c0 5 7 12 7 12z" />
+                  <circle cx="12" cy="9" r="2.3" />
+                </svg>
+
+                <p>
+                  Ground Floor, 2727/1, 27th Main Rd,<br />
+                  HSR Layout, Bengaluru 560102
+                </p>
+              </div>
+
+              <div class="kathe-card-buttons">
+                <a href="tel:+9194888 45678" class="kathe-map-btn">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3.1 5.2 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.7 13 13 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1L9 10.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5 13 13 0 0 0 2.8.7 2 2 0 0 1 1.8 2.1z"/>
+                  </svg>
+                  CALL US
+                </a>
+
+
+
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Kathe%20-%20Speciality%20Coffee,%202727/1,%2016th%20Cross,%2027th%20Main%20Rd,%20HSR%20Layout,%20Bengaluru,%20Karnataka%20560102" class="kathe-direction-btn">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M21 3L10 14" />
+                    <path d="M21 3l-7 18-4-7-7-4L21 3z" />
+                  </svg>
+
+                  GET DIRECTIONS
+                </a>
+              </div>
+            </div>
+
+            <!-- LOCATION 2 -->
+
+            <div class="kathe-location-card">
+              <div class="kathe-card-header">
+                <div class="kathe-location-name">
+                  <div class="kathe-pin">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M12 21s7-7 7-12a7 7 0 1 0-14 0c0 5 7 12 7 12z" />
+                      <circle cx="12" cy="9" r="2.3" />
+                    </svg>
+                  </div>
+
+                  <div>
+                    <span class="kathe-location-number"> LOCATION 02 </span>
+
+                    <h3>Kathe Specialty Coffee</h3>
+                  </div>
+                </div>
+
+                <div class="kathe-open">
+                  <!-- <i></i> -->
+                  OPEN · 8AM – 11PM
+                </div>
+              </div>
+
+              <div class="kathe-address">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 21s7-7 7-12a7 7 0 1 0-14 0c0 5 7 12 7 12z" />
+                  <circle cx="12" cy="9" r="2.3" />
+                </svg>
+
+                <p>
+                  41, 9, Sunkenahalli, Gandhi Bazaar, Basavanagudi, Bengaluru,<br />
+                  Bengaluru, Karnataka 560004
+                </p>
+              </div>
+
+              <div class="kathe-card-buttons">
+                <a href="tel:+919900316750" class="kathe-map-btn">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3.1 5.2 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.7 13 13 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1L9 10.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5 13 13 0 0 0 2.8.7 2 2 0 0 1 1.8 2.1z"/>
+                  </svg>
+                  CALL US
+                </a>
+
+
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Kathe%20Specialty%20Coffee,%2041,%209,%20Sunkenahalli,%20Gandhi%20Bazaar,%20Basavanagudi,%20Bengaluru,%20Karnataka%20560004" class="kathe-direction-btn">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M21 3L10 14" />
+                    <path d="M21 3l-7 18-4-7-7-4L21 3z" />
+                  </svg>
+
+                  GET DIRECTIONS
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= FOLLOW ================= -->
+
+        <div class="kathe-follow">
+          <div class="kathe-heading kathe-follow-heading">FOLLOW ALONG</div>
+
+          <div class="kathe-follow-line"></div>
+
+          <p>
+            Good Coffee<br />
+            Brings People<br />
+            Together
+          </p>
+
+          <div class="kathe-social">
+            <a href="https://www.instagram.com/kathe.blr/" aria-label="Instagram">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" />
+              </svg>
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=61589831272123" aria-label="Facebook">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M14 8h3V4h-3c-3.3 0-5 2-5 5v2H6v4h3v5h4v-5h3l1-4h-4V9c0-.7.3-1 1-1z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= BOTTOM ================= -->
+
+      <div class="kathe-footer-bottom">
+        <p>
+          © 2026 Kathe Specialty Coffee. Brewed with intention. Crafted in
+          Bengaluru.
+        </p>
+
+        <a href="#home"> Back to top ↑ </a>
+      </div>
+    </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
